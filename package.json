@@ -9,6 +9,10 @@
     "scripts": {
         "test": "node index.js test-project"
     },
+    "files": [
+        "index.js",
+        "lib"
+    ],
     "keywords": [
         "monorepo",
         "bun",
@@ -18,14 +22,14 @@
         "nextjs",
         "hono"
     ],
-    "author": "",
+    "author": "Rahul",
     "license": "MIT",
     "dependencies": {
         "minimist": "^1.2.8"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "git+https://github.com/rahulyadav139/palasio-setup.git"
     },
     "engines": {
         "node": ">=18.0.0"
