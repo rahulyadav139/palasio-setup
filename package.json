@@ -1,0 +1,33 @@
+{
+    "name": "palasio-setup",
+    "version": "1.0.0",
+    "description": "Scaffold a modern Bun-based monorepo with TypeScript, shared tooling, and starter apps",
+    "main": "index.js",
+    "bin": {
+        "palasio-setup": "./index.js"
+    },
+    "scripts": {
+        "test": "node index.js test-project"
+    },
+    "keywords": [
+        "monorepo",
+        "bun",
+        "typescript",
+        "scaffolding",
+        "template",
+        "nextjs",
+        "hono"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "minimist": "^1.2.8"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
