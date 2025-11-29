@@ -1,0 +1,32 @@
+{
+  "name": "@repo/database",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --cache --cache-location .eslintcache",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rimraf node_modules dist",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "prettier": "catalog:",
+    "rimraf": "^6.0.1",
+    "typescript": "catalog:"
+  },
+  "prettier": "@repo/prettier-config",
+  "dependencies": {
+    "@repo/shared": "workspace:*"
+  },
+  "exports": {
+    "./*": "./src/*/index.ts",
+    ".": "./src/index.ts"
+  }
+}

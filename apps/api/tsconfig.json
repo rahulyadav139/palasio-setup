@@ -1,0 +1,37 @@
+{
+  "extends": "@repo/typescript-config/node",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "types": [
+      "bun-types"
+    ],
+    "baseUrl": ".",
+    "incremental": true,
+    "outDir": "./dist",
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../../packages/database/tsconfig.json"
+    },
+    {
+      "path": "../../packages/shared/tsconfig.json"
+    }
+  ]
+}

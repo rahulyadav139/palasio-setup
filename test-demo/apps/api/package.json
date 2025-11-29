@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "start": "bun run dist/index.js",
+    "lint": "eslint src --cache --cache-location .eslintcache",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rimraf node_modules dist .eslintcache",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bun": "latest",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1"
+  },
+  "prettier": "@repo/prettier-config",
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.2",
+    "@repo/shared": "workspace:*",
+    "hono": "^4.9.4",
+    "zod": "^4.0.17"
+  }
+}

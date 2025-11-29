@@ -1,0 +1,29 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --cache --cache-location .eslintcache",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rimraf node_modules dist",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "catalog:",
+    "rimraf": "^6.0.1",
+    "typescript": "catalog:"
+  },
+  "prettier": "@repo/prettier-config",
+  "dependencies": {
+    "@repo/shared": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
