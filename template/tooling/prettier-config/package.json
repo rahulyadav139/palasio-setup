@@ -1,0 +1,16 @@
+{
+  "name": "@repo/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo 'No linting needed for Prettier config package'",
+    "type-check": "echo 'No types to check for Prettier config package'"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "devDependencies": {
+    "prettier": "catalog:"
+  }
+}

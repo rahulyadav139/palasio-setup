@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist --target bun --external hono",
+    "start": "bun run dist/index.js",
+    "lint": "eslint . --max-warnings 0 --cache --cache-location .eslintcache"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "hono": "^4.9.4",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
